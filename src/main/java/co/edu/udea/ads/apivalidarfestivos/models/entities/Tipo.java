@@ -10,13 +10,13 @@ import org.hibernate.annotations.GenericGenerator;
 @NoArgsConstructor // Constructor vacío de la clase Tipo- Lombok
 @AllArgsConstructor //Constructor con todos los argumentos de la clase Tipo- Lombok
 @Entity
+@Table(name = "tipo")
 public class Tipo {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "seq_tipoFestivo")
-    @GenericGenerator(name = "seq_tipoFestivo", strategy = "increment")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "idTipo", unique = true, length = 100)
+    @Column(name = "tipo", unique = true, length = 100)
     private String tipo;
 }

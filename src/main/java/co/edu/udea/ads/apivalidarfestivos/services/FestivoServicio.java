@@ -90,7 +90,7 @@ public class FestivoServicio implements IFestivoServicio {
             Date pascua = obtenerDomingoPascua(año);
             int i = 0;
             for (final Festivo festivo : festivos) {
-                switch (festivo.getIdTipo().getId()) {
+                switch (festivo.getTipo().getId()) {
                     case 1:
                         festivo.setFecha(new Date(año - 1900, festivo.getMes() - 1, festivo.getDia()));
                         break;

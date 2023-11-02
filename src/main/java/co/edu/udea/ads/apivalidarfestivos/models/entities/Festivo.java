@@ -16,8 +16,7 @@ import java.util.Date;
 public class Festivo {
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "seq_festivo")
-    @GenericGenerator(name = "seq_festivo", strategy = "increment")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     @Column(name = "dia")
@@ -29,12 +28,12 @@ public class Festivo {
     @Column(name = "nombre", length = 100)
     private String nombre;
 
-    @Column(name = "diasPascua")
+    @Column(name = "dias_pascua")
     private Integer diasPascua;
 
     private Date fecha;
 
-    @OneToOne
-    @JoinColumn(name = "idTipo", referencedColumnName = "id")
-    private Tipo idTipo;
+    @ManyToOne
+    @JoinColumn(name = "id_tipo", referencedColumnName = "id")
+    private Tipo tipo;
 }

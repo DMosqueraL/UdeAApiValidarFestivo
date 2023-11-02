@@ -1,4 +1,4 @@
-package co.edu.udea.ads.apivalidarfestivos.model.entities;
+package co.edu.udea.ads.apivalidarfestivos.models.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

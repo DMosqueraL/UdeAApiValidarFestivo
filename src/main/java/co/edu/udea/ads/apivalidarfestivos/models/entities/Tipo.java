@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.GenericGenerator;
 
 @Data //Getters & Setter de la clase Tipo - Lombok
 @NoArgsConstructor // Constructor vacío de la clase Tipo- Lombok
